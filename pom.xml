@@ -14,7 +14,7 @@
 		<!-- junit版本 -->
 		<junit.version>4.11</junit.version>
 		<!-- spring版本 -->
-		<spring.version>4.2.6.RELEASE</spring.version>
+		<spring.version>4.3.13.RELEASE</spring.version>
 		<!-- redis.clients版本 -->
 		<redis.clients.version>2.9.0</redis.clients.version>
 		<!-- redis版本 -->
@@ -26,9 +26,10 @@
 		<!-- servlet版本 -->
 		<servlet.version>3.1.0</servlet.version>
 		<!-- slf4j版本 -->
-		<slf4j.version>1.7.21</slf4j.version>
+		<slf4j.version>1.7.25</slf4j.version>
 		<!-- log4j版本 -->
 		<log4j.version>1.2.17</log4j.version>
+		<fastjson.version>1.2.46</fastjson.version>
 	</properties>
 
 	<dependencies>
@@ -197,11 +198,11 @@
 			<version>1.2</version>
 		</dependency>
 
-		<!--阿里的fastjson -->
+		<!-- fastjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.20</version>
+			<version>${fastjson.version}</version>
 		</dependency>
 
 	</dependencies>
