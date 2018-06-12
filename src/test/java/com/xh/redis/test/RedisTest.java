@@ -2,11 +2,10 @@ package com.xh.redis.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.xh.redis.service.StudentService;
+import com.xh.redis.util.RedisUtil;
 
 /**
 * <p>Title: </p>
@@ -17,11 +16,8 @@ import com.xh.redis.service.StudentService;
 * @date 2018年2月24日
 */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring.xml")
-public class StudentServiceTest {
-
-	@Autowired
-	private StudentService stuService;
+@ContextConfiguration(locations = "classpath:spring/spring-redis.xml")
+public class RedisTest {
 
 	/**
 	 * <p>Title: 添加对象</p>
@@ -34,7 +30,7 @@ public class StudentServiceTest {
 	@Test
 	public void save() {
 
-		boolean result = stuService.addString("name", "我是一只111小鸟");
+		boolean result = RedisUtil.set("name2", "我是一只111小鸟");
 		System.out.println(result);
 	}
 
