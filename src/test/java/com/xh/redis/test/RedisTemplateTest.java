@@ -5,33 +5,32 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.xh.redis.util.RedisUtil;
+import com.xh.redis.util.RedisTemplateUtil;
 
 /**
-* <p>Title: </p>
-* <p>Description: </p>
-* 
-* @author H.Yang
-* @QQ 1033542070
-* @date 2018年2月24日
-*/
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * 
+ * @author H.Yang
+ * @QQ 1033542070
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring/spring-redis.xml")
-public class RedisTest {
+@ContextConfiguration(locations = "classpath:spring/spring-redistemplate.xml")
+public class RedisTemplateTest {
 
 	/**
 	 * <p>Title: 添加对象</p>
 	 * <p>Description: </p>
 	 * 
 	 * @author H.Yang
-	 * @date 2018年2月24日
 	 * 
 	 */
 	@Test
 	public void save() {
-
-		boolean result = RedisUtil.set("name2", "我是一只111小鸟");
+		RedisTemplateUtil.del("name");
+		boolean result = RedisTemplateUtil.set("name", "我是一只111小鸟");
 		System.out.println(result);
+		String name = (String) RedisTemplateUtil.get("name");
+		System.out.println(name);
 	}
-
 }

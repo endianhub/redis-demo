@@ -16,7 +16,7 @@ import org.springframework.util.CollectionUtils;
 * @QQ 1033542070
 
 */
-public class RedisUtil {
+public class RedisTemplateUtil {
 
 	private static RedisTemplate<String, Object> redisTemplate;
 

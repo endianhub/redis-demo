@@ -38,7 +38,7 @@
 	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
 		destroy-method="destroy">
 		<property name="poolConfig" ref="poolConfig"></property>
-		<property name="hostName" value="${redis.hostName}"></property>
+		<property name="hostName" value="${redis.host}"></property>
 		<property name="port" value="${redis.port}"></property>
 		<property name="password" value="${redis.password}" />
 		<property name="timeout" value="${redis.timeout}"></property>
@@ -55,16 +55,16 @@
 		<property name="connectionFactory" ref="jedisConnectionFactory" />
 		<!--如果不配置Serializer，那么存储的时候缺省使用String，如果用User类型存储，那么会提示错误User can't cast to String！！ -->
 		<property name="keySerializer" ref="stringRedisSerializer" />
-		<property name="valueSerializer" ref="stringRedisSerializer" />
+		<property name="valueSerializer" ref="genericJackson2JsonRedisSerializer" />
 		<property name="hashKeySerializer" ref="stringRedisSerializer" />
-		<property name="hashValueSerializer" ref="stringRedisSerializer" />
+		<property name="hashValueSerializer" ref="genericJackson2JsonRedisSerializer" />
 
 		<!--开启事务 -->
 		<property name="enableTransactionSupport" value="true"></property>
 	</bean>
 
 	<!--自定义Redis工具类 -->
-	<bean id="redisUtil" class="com.xh.redis.util.RedisUtil">
+	<bean id="redisTemplateUtil" class="com.xh.redis.util.RedisTemplateUtil">
 		<property name="redisTemplate" ref="redisTemplate" />
 	</bean>
 
