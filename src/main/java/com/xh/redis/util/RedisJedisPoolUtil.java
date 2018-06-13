@@ -11,7 +11,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 /**
- * <b>Title: Redis缓存工具类</b>
+ * <b>Title: Redis缓存工具类(建议使用)</b>
  * <p>Description: </p>
  * 
  * @author H.Yang

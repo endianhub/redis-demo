@@ -9,7 +9,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.CollectionUtils;
 
 /**
-* <p>Title: </p>
+* <p>Title: Redis缓存工具类</p>
 * <p>Description: </p>
 * 
 * @author H.Yang
