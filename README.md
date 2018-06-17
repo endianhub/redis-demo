@@ -168,8 +168,15 @@ shared一致性哈希采用以下方案：<br>
 4、对Key or KeyTag 采用同样的hash算法，然后从TreeMap获取大于等于键hash值得节点，取最邻近节点存储；当key的hash值大于虚拟节点hash值得最大值时，存入第一个虚拟节点sharded采用的hash算法：MD5 和 MurmurHash两种；默认采用64位的MurmurHash算法；<br>
 
 
+<br>
+<br>
+<br>
 
 
+JedisSentinelPool和JedisPool区别<br>
+
+JedisSentinelPool：（连接池）用于配置连接多个redis缓存数据库<br>
+JedisPool：（连接池）用户连接单个redis缓存数据库<br>
 
 
 
