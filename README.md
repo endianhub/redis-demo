@@ -175,7 +175,7 @@ shared一致性哈希采用以下方案：<br>
 
 JedisSentinelPool和JedisPool区别<br>
 
-JedisSentinelPool：（连接池）用于配置连接多个redis缓存数据库<br>
+JedisSentinelPool：（连接池）用于配置连接多个redis缓存数据库，分布式，多个redis同步数据时用<br>
 JedisPool：（连接池）用户连接单个redis缓存数据库<br>
 
 
